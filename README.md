@@ -28,14 +28,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-1. Clone This Repo with the following link `git clone https://github.com/ismailraqi/`
-2. inside project open new terminale and run the following line  `npm install` 
-3. It's finish !
-
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Clone This Repo with the following link `https://github.com/ismailraqi/EcomSolution-Front-End`
+2. inside project open new terminale and run the following line  `npm install`
+3. in the same terminale run `ng serve -o` . NB : The app will automatically reload if you change any of the source files.
+3. It's finish enjoy !
 
 
 
