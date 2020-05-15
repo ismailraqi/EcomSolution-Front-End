@@ -36,6 +36,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## Preview
-![Screenshot 1](home.png)
-![Screenshot 2](product.png)
+![Screenshot 1](screens/auth.png)
+![Screenshot 2](screens/home.png)
+![Screenshot 3](screens/detail.png)
+![Screenshot 4](screens/cart.png)
+![Screenshot 5](screens/comparelist.PNG)
+![Screenshot 6](screens/wishlist.PNG)
 
