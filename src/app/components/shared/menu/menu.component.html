@@ -1,0 +1,102 @@
+<mat-toolbar-row fxHide fxShow.gt-sm class="container" fxLayout="row"  fxLayout.xs="row" fxLayoutAlign="space-between center">
+  <div class="main-menu" fxLayout="row" fxHide fxShow.gt-sm>
+      <a [routerLink]="['/home/one']" routerLinkActive="router-link-active"  mat-button class="mat-button"><mat-icon class="caret">home</mat-icon></a>      
+      <a [routerLink]="['/home/products/all']" routerLinkActive="router-link-active"  mat-button class="mat-button">Products</a>
+      <a  mat-button [matMenuTriggerFor]="shop" class="mat-button" (click)="openMegaMenu()">Shop<mat-icon class="caret">arrow_drop_down</mat-icon></a>
+      <mat-menu #shop="matMenu" [overlapTrigger]="false" class="app-dropdown mega-menu">
+          <div fxLayout="row wrap">
+              <div fxFlex="25" fxLayout="column" class="p-1">
+                  <a mat-menu-item routerLink="/"><b>COMPUTERS</b></a>
+                  <mat-divider></mat-divider>
+                  <a mat-menu-item routerLink="/">Laptops</a>
+                  <a mat-menu-item routerLink="/">Cables</a>
+                  <a mat-menu-item routerLink="/">Monitors</a>
+                  <a mat-menu-item routerLink="/">Tablets</a>
+                  <a mat-menu-item routerLink="/">Headsets</a>
+              </div>
+              <div fxFlex="25" class="p-1">
+                  <a mat-menu-item routerLink="/"><b>TV & AUDIO</b></a>
+                  <mat-divider></mat-divider>
+                  <button mat-menu-item>TV</button>
+                  <button mat-menu-item>Video</button>
+                  <button mat-menu-item>Audio</button>
+                  <button mat-menu-item>DVD</button>
+              </div>
+              <div fxFlex="25" class="p-1">
+                  <a mat-menu-item routerLink="/"><b>PHONES</b></a>
+                  <mat-divider></mat-divider>
+                  <button mat-menu-item>Mobile phones</button>
+                  <button mat-menu-item>Power Bank</button>
+                  <button mat-menu-item>Memory Cards</button>
+                  <button mat-menu-item>Accesories</button>
+              </div>
+              <div fxFlex="25" class="p-1">
+                  <a mat-menu-item routerLink="/"><b>ELECTRONICS</b></a>
+                  <mat-divider></mat-divider>
+                  <button mat-menu-item>Washing Machines</button>
+                  <button mat-menu-item>Water heater</button>
+                  <button mat-menu-item>Cookers</button>
+                  <button mat-menu-item>Cold stores</button>
+              </div>
+
+          </div>
+
+      </mat-menu>
+      <a  mat-button [routerLink]="['/blog/blog-list']"  routerLinkActive="router-link-active" class="mat-button" >Blog</a>
+      <a  mat-button [routerLink]="['/pages/about']" routerLinkActive="router-link-active" class="mat-button" >About Us</a>
+      <a  mat-button [routerLink]="['/pages/faq']" routerLinkActive="router-link-active" class="mat-button" >FAQ</a>
+      <a  mat-button [routerLink]="['/pages/contact']" routerLinkActive="router-link-active" class="mat-button" >Contact Us</a>
+      </div>
+    <!-- <app-shopping-widgets *ngIf="url == '/home/one'" [shoppingCartItems]="shoppingCartItems"></app-shopping-widgets> -->
+    <!-- <div class="main-menu-wrapper" fxLayout="row" fxLayoutAlign="space-between center" >
+
+        <div class="commerce-buttons" fxLayout="row" fxLayoutAlign="end center">
+
+          <button mat-button class="flex-row-button mat-button" fxLayoutAlign="space-between center" [matMenuTriggerFor]="menu">
+            <div class="mat-button-wrapper">
+                <div class="" >
+                    <mat-icon class="mat-icon-lg mat-icon material-icons">local_grocery_store</mat-icon>
+                    <span class="cart-count-wrapper">{{shoppingCartItems.length}}</span>
+                  </div>
+                  <div class="top-cart">
+                      <span>{{ getTotal() | async | currency:productsService?.currency:'symbol'}}</span>
+                  </div>
+            </div>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div class="spCard-dropdown">
+              <div class="card-list-title" fxLayout="row" fxLayoutAlign="space-between start">
+                 <a [routerLink]="['/cart']" routerLinkActive="router-link-active" ><p>CHECK CARD</p></a>
+                  <p>{{shoppingCartItems.length}} ITEM</p>
+              </div>
+                  <mat-divider></mat-divider>
+                  <p class="woo-message" *ngIf="!shoppingCartItems.length">Please add product<p>
+
+                  <div class="new-product" fxLayout="column" *ngIf="shoppingCartItems.length">
+                    <div class="item" fxLayout="row" fxLayoutAlign="start start" *ngFor="let item of shoppingCartItems">
+                        <div class="product">
+                            <img [src]="item.product.pictures" alt="">
+                           </div>
+                          <div class="desc">
+                            <p>{{item.product.name}}</p>
+                            <span>{{item.quantity}} X {{item.product.price}}</span>
+                           </div>
+                           <div class="close-circle">
+                              <a (click)="removeItem(item)"><i class="material-icons">
+                                  delete
+                                  </i></a>
+                            </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="total" fxLayout="row" fxLayoutAlign="space-between center">
+                        <p class="text-muted">Subtotal: </p>
+                        <span>{{ getTotal() | async | currency:productsService?.currency:'symbol' }}</span>
+                      </div>
+                  </div>
+            </div>
+       </mat-menu>
+        </div>
+
+      </div> -->
+</mat-toolbar-row>
+
